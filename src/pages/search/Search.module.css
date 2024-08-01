@@ -1,0 +1,114 @@
+.container {
+  margin: 0px auto;
+  width: 1400px;
+  padding: 0 100px;
+  display: flex;
+}
+.history {
+  width: 25%;
+  padding: 50px 0;
+}
+.historyDiv {
+  background-color: beige;
+  color: black;
+  margin-right: 50px;
+  padding: 50px 40px;
+  border-radius: 25px;
+  min-height: 300px;
+}
+.activity {
+  width: 75%;
+  padding: 50px 0;
+}
+.searchDiv {
+  height: 300px;
+  padding: 50px;
+  background-image: url("../../assets/images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  align-content: flex-end;
+  border-radius: 25px;
+}
+.searchDiv h1 {
+  color: white;
+  font-size: 56px;
+}
+.searchDiv p {
+  color: white;
+  margin-top: 12px;
+}
+.searchBox {
+  display: flex;
+  align-items: center;
+  align-content: space-between;
+  width: 350px;
+  margin-top: 40px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  padding: 10px;
+}
+.searchBox .seachIcon {
+  width: 23px;
+  height: 23px;
+  color: rgb(112, 112, 112);
+  margin: 4px 5px 0 5px;
+}
+.searchBox form {
+  width: 95%;
+  display: inline-flex;
+  align-items: center;
+}
+.searchBox input {
+  width: 70%;
+  height: 32px;
+  border: none;
+  background: none;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 0 0 0 10px;
+}
+.searchBox input:visited {
+  border: none;
+}
+.searchBox input:focus {
+  border: none;
+}
+.searchBox input:focus-within {
+  border: none;
+}
+.searchBox input:focus-visible {
+  border: none;
+}
+.searchBox button {
+  width: 30%;
+  height: 38px;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  background-color: #f08f0e;
+  border-radius: 10px;
+  align-content: center;
+  cursor: pointer;
+}
+.resultDiv {
+  border-radius: 25px;
+  margin-top: 50px;
+}
+.resultBox {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 24px;
+}
+.resultBox h4 {
+  width: 100%;
+  padding: 50px;
+  background-color: beige;
+  border-radius: 25px;
+}
+
+.bottomDiv {
+  width: 100%;
+}

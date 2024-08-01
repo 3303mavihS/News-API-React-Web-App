@@ -1,0 +1,31 @@
+.container {
+  margin: 80px auto;
+}
+.slidersDiv {
+  width: 1200px;
+  margin: 0 auto;
+}
+.blogDiv {
+  width: 1200px;
+  margin: 0 auto;
+}
+.resultDiv {
+  /* padding: 50px; */
+  /* background-color: beige; */
+  border-radius: 25px;
+  margin-top: 50px;
+  text-align: center;
+}
+.resultBox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 36px;
+  margin-top: 50px;
+}
+.resultBox h4 {
+  width: 100%;
+  padding: 50px;
+  background-color: beige;
+  border-radius: 25px;
+}

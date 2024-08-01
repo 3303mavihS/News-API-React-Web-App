@@ -1,0 +1,44 @@
+.container {
+  margin: 0px auto;
+  width: 1400px;
+  padding: 0 100px;
+  display: flex;
+}
+.history {
+  width: 25%;
+  padding: 50px 0;
+}
+.historyDiv {
+  background-color: beige;
+  color: black;
+  margin-right: 50px;
+  padding: 50px 40px;
+  border-radius: 25px;
+  min-height: 300px;
+}
+.historyDiv h3::first-letter {
+  text-transform: capitalize;
+}
+.activity {
+  width: 75%;
+  padding: 50px 0;
+}
+.resultDiv {
+  border-radius: 25px;
+}
+.resultBox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 24px;
+}
+.resultBox h4 {
+  width: 100%;
+  padding: 50px;
+  background-color: beige;
+  border-radius: 25px;
+}
+
+.bottomDiv {
+  width: 100%;
+}

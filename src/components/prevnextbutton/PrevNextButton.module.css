@@ -1,0 +1,20 @@
+.buttonDiv {
+  display: flex;
+  background-color: beige;
+  padding: 30px;
+  border-radius: 25px;
+  margin-top: 50px;
+  column-gap: 50px;
+  justify-content: center;
+}
+.button {
+  width: 130px;
+  height: 38px;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  background-color: #f08f0e;
+  border-radius: 10px;
+  align-content: center;
+  cursor: pointer;
+}

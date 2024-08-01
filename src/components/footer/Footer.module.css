@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  width: 1500px;
+  height: 80px;
+  padding: 0 50px;
+  background-color: beige;
+  margin: 0 auto;
+  align-items: center;
+}
+.container p {
+  font-size: 13px;
+  margin: 0 auto;
+}

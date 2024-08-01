@@ -1,0 +1,28 @@
+.sliderCard {
+  width: 1200px;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+  background-size: cover;
+  z-index: 0;
+  margin: 0 -45px;
+}
+.sliderCard a {
+  text-decoration: none;
+  color: white;
+}
+.contentContainer {
+  height: 340px;
+  border-radius: 25px;
+  align-content: end;
+  background-color: rgba(0, 0, 0, 0.356);
+  z-index: 0;
+  padding: 50px 90px;
+}
+.sliderCard h3 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+.sliderCard p {
+  font-size: 20px;
+  line-height: 24px;
+}
