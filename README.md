@@ -1,82 +1,106 @@
-# Getting Started with Create React App
+# News API React Web App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A responsive React web application that delivers real-time news from around the world using the [NewsAPI](https://newsapi.org/) service. Browse top headlines by category and country, search articles by keyword, and enjoy a clean card-based UI with dark mode support.
+
+## Features
+
+- 🏠 **Home feed** – top headlines with a featured news slider
+- 🗂️ **Categories** – browse news by category (business, sports, tech, etc.) and country
+- 🔍 **Search** – keyword search with recent-search history
+- 🌙 **Dark mode** – theme toggle via React Context
+- 📱 **Responsive design** – card-based layout with loading spinners and empty-state images
+
+## Tech Stack
+
+- **React** (Create React App)
+- **React Router DOM** – client-side routing
+- **Axios** – API requests
+- **React Icons** – UI icons
+- **CSS Modules** – scoped component styling
+- **NewsAPI** – news data source
+
+## Project Structure
+
+```
+src/
+├── assets/          # Static data (category/country keywords) and images
+├── components/      # Reusable UI components (Card, Navbar, Sliders, ...)
+├── context/         # ThemeContext for dark mode
+├── pages/           # Home, Categories, Search pages
+└── routes/          # AppRouter
+```
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v14+)
+- A free API key from [NewsAPI](https://newsapi.org/register)
+
+### Setup
+
+1. Clone the repository:
+   ```bash
+   git clone <repo-url>
+   cd News-API-React-Web-App
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Configure your API key:
+   ```bash
+   cp .env.example .env
+   ```
+   Then edit `.env` and paste your key:
+   ```
+   REACT_APP_NEWS_API_KEY=your_newsapi_key_here
+   ```
+   > ⚠️ Never commit `.env` — it is gitignored. See the Security TODO below.
+
+4. Start the development server:
+   ```bash
+   npm start
+   ```
+   Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## Available Scripts
 
-In the project directory, you can run:
+| Command         | Description                                  |
+| --------------- | -------------------------------------------- |
+| `npm start`     | Runs the app in development mode             |
+| `npm test`      | Launches the test runner in watch mode       |
+| `npm run build` | Builds the production bundle to `build/`     |
+| `npm run eject` | Ejects CRA config (one-way, not recommended) |
 
-### `npm start`
+## ⚠️ Security TODO
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [ ] **ROTATE COMPROMISED API KEY (Critical — CWE-798):** A live NewsAPI key
+      (`586f38b2...6128a`) was committed in commit `f3fb823` and remains visible
+      in git history. It **must be revoked/regenerated** at
+      https://newsapi.org/account — masking it in a later commit (`aa088fa`)
+      does NOT remove it from history.
+  - [ ] Revoke the old key and generate a new one on the NewsAPI dashboard
+  - [ ] Add the new key to your local `.env` (placeholder is already in place)
+  - [ ] Purge the key from git history (`git filter-repo` or BFG Repo-Cleaner)
+        and force-push, or delete/recreate the remote repo
+  - [x] Add `.env` to `.gitignore`
+  - [x] Remove `.env` from git tracking (`git rm --cached .env`)
+  - [x] Replace committed key with a placeholder + rotation notice in `.env`
+  - [x] Add `.env.example` template for contributors
+- [ ] URL-encode user-supplied search input (`encodeURIComponent`) when building
+      NewsAPI request URLs in `Search.jsx`, `Categories.jsx`, and `Home.jsx`.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Notes
 
-### `npm test`
+- NewsAPI's free (developer) plan only allows requests from `localhost` — API
+  calls will fail with a CORS/426 error on deployed domains without a paid plan.
+- The API key is embedded in the client bundle by design of CRA env vars
+  (`REACT_APP_*`); for production-grade secrecy, proxy requests through a
+  backend server.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## License
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-### 'npm install react-router-dom'
-
-installed react-router-dom
-
-### 'npm install react-icons --save'
-
-installed react-icons
-
-### 'npm install axios'
-
-installed axios for api handling
+This project is for educational purposes.
